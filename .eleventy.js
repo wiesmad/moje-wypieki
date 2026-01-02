@@ -5,6 +5,6 @@ module.exports = function (eleventyConfig) {
     dir: {
       output: "docs",
     },
-    pathPrefix: "/moje-wypieki/", // <-- only for project pages
+    pathPrefix: "moje-wypieki/", // <-- only for project pages
   };
 };
