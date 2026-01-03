@@ -3,14 +3,14 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="/public/css/style.css" />
-        <script src="/public/js/script.js" defer></script>
+        <link rel="stylesheet" href="{{ '/public/css/style.css' | url }}" />
+        <script src="{{ '/public/js/script.js' | url }}" defer></script>
         <title>{{ title }}</title>
     </head>
     <body>
         <div class="container">
             <header class="site-header">
-                <h2>{{ title | default: "Mam Wypieki ☺️" }}</h2>
+                <h2>{{ title }}</h2>
 
                 <input type="checkbox" id="nav-checkbox" class="nav-checkbox" />
 
@@ -23,18 +23,18 @@
                 </label>
 
                 <nav class="nav">
-                    <a href="/">Home</a>
-                    <a href="/bakery">Bakery</a>
-                    <a href="/vege">Vege</a>
-                    <a href="/about">About</a>
+                    <a href="{{ '/' | url }}">Home</a>
+                    <a href="{{ '/bakery' | url }}">Bakery</a>
+                    <a href="{{ '/vege' | url }}">Vege</a>
+                    <a href="{{ '/about' | url }}">About</a>
                 </nav>
             </header>
 
-            <main>{{ content }}</main>
+            <main>{{ content | safe }}</main>
         </div>
 
         <footer>
-            <p>&copy; {{ "now" | date: "%Y" }} Mam Wypieki</p>
+            <p>&copy; 2025 Mam Wypieki</p>
         </footer>
     </body>
 </html>

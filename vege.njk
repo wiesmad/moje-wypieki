@@ -1,5 +1,5 @@
 ---
-layout: base.html
+layout: base.njk
 title: Vege
 ---
 
@@ -8,9 +8,9 @@ title: Vege
 <section class="recipe-grid">
     {% for recipe in collections.odd %}
     <article class="card">
-        <a href="{{ recipe.url }}" class="card-media">
+        <a href="{{ recipe.url | url }}" class="card-media">
             <img
-                src="/public/img/{{ recipe.data.image }}"
+                src="{{ ('/public/img/' + recipe.data.image) | url }}"
                 alt="{{ recipe.data.title }}"
                 loading="lazy"
             />
