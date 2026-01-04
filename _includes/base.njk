@@ -10,7 +10,7 @@
     <body>
         <div class="container">
             <header class="site-header">
-                <h2><a href="{{ '/' | url }}">Mam Wypieki</a> - {{ title }}</h2>
+                <h2><a href="{{ '/' | url }}">Mam Wypieki</a></h2>
 
                 <input type="checkbox" id="nav-checkbox" class="nav-checkbox" />
 
@@ -29,6 +29,8 @@
                     <a href="{{ '/about' | url }}">About</a>
                 </nav>
             </header>
+
+            <h3 class="page-title">{{ title }}</h3>
 
             <main>{{ content | safe }}</main>
         </div>

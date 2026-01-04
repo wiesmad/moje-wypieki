@@ -6,4 +6,6 @@ image: bread.jpg
 imageAlt: bread
 ---
 
+<div class="post-content">
 content of post 2
+</div>

@@ -1,3 +1,5 @@
+@import url("variable.css");
+
 *,
 *:before,
 *:after {
@@ -13,7 +15,7 @@ body {
 }
 
 body {
-    background-color: gray;
+    background-color: var(--color-background);
 }
 
 .container {
@@ -26,17 +28,30 @@ body {
     gap: 1rem;
 }
 
+.page-title {
+    padding-inline: var(--side-padding);
+}
+
+.post-content {
+    padding-inline: var(--side-padding);
+}
+
 .recipe-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: clamp(20px, 3vw, 36px);
+    gap: 1rem;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(var(--min-col-size), 100%), 1fr)
+    );
+
+    padding-inline: var(--side-padding);
 }
 
 .card {
     display: flex;
     flex-direction: column;
     background-color: #fff;
-    /*aspect-ratio: 4 / 5;*/
     border-radius: 6px;
     overflow: hidden;
 }
@@ -59,7 +74,8 @@ body {
 .card-title {
     font-size: 1.25rem;
     font-weight: 700;
-    padding: 1rem;
+    padding-block: 1rem;
+    padding-inline: var(--side-padding);
 }
 
 .site-header {
@@ -67,7 +83,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 2rem;
+    padding-block: 0.5rem;
+    padding-inline: var(--side-padding);
     background: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -83,24 +100,29 @@ body {
     user-select: none;
 }
 
-.nav a {
-    margin-left: 20px;
+a {
     text-decoration: none;
     color: #333;
     font-weight: 500;
 }
 
-.nav a:hover {
-    color: #007bff;
+nav {
+    display: flex;
+    gap: 1rem;
+
+    a:hover {
+        color: #007bff;
+    }
 }
 
-footer {
-    background: #2f2f2f;
-    color: #ffffff;
-    text-align: center;
-    font-size: 0.8rem;
-    margin-top: 1rem;
-    padding: 0.5rem 0;
+.about-txt {
+    padding-inline: var(--side-padding);
+}
+
+.write-me {
+    padding-block: 1rem;
+    padding-inline: var(--side-padding);
+    color: red;
 }
 
 footer p {
