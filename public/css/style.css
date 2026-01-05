@@ -123,6 +123,15 @@ nav {
     color: red;
 }
 
+footer {
+    background: #2f2f2f;
+    color: #ffffff;
+    text-align: center;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    padding: 0.5rem 0;
+}
+
 footer p {
     margin: 0;
 }
