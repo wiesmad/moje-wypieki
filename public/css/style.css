@@ -5,18 +5,6 @@
     margin: 0;
 }
 
-/*html,
-body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background-image: url("/moje-wypieki/public/img/bckgr.webp");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: repeat;
-    position: relative;
-}*/
-
 html,
 body {
     margin: 0;
@@ -25,6 +13,7 @@ body {
 
 body {
     position: relative;
+    font-family: "Roboto", sans-serif;
 }
 
 body::before {
@@ -32,7 +21,7 @@ body::before {
     position: fixed;
     inset: 0;
     background:
-        linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4)),
+        linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.4)),
         url("/moje-wypieki/public/img/bckgr.webp") center center / cover
             no-repeat;
     z-index: -1;
