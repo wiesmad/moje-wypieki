@@ -1,4 +1,4 @@
 {
-  "layout": "base.njk",
+  "layout": "layouts/recipe.njk",
   "tags": "recipes"
 }

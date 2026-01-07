@@ -1,9 +1,9 @@
 ---
-title: Home made Pizza
+title: Rajma
 date: 2024-11-02
-tags: ['even']
-image: bread.jpg
-imageAlt: bread
+tags: ['vege']
+image: rajma.webp
+imageAlt: rajma
 ---
 
 <div class="post-content">

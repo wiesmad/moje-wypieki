@@ -1,12 +1,12 @@
 ---
 layout: base.njk
-title: Bakery
+title: Wypieki
 ---
 
 <!-- CONTENT -->
 
-<section class="recipe-grid">
-    {% for recipe in collections.even %}
+<section class="card-grid">
+    {% for recipe in collections.wypieki %}
     <article class="card">
         <a href="{{ recipe.url | url }}" class="card-media">
             <img

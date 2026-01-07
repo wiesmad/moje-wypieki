@@ -5,6 +5,8 @@
     margin: 0;
 }
 
+/*GENERAL*/
+
 html,
 body {
     margin: 0;
@@ -21,7 +23,7 @@ body::before {
     position: fixed;
     inset: 0;
     background:
-        linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.4)),
+        linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.6)),
         url("/moje-wypieki/public/img/bckgr.webp") center center / cover
             no-repeat;
     z-index: -1;
@@ -37,55 +39,7 @@ body::before {
     gap: 1rem;
 }
 
-.page-title {
-    padding-inline: var(--side-padding);
-}
-
-.post-content {
-    padding-inline: var(--side-padding);
-}
-
-.recipe-grid {
-    display: grid;
-    gap: 1rem;
-
-    grid-template-columns: repeat(
-        auto-fit,
-        minmax(min(var(--min-col-size), 100%), 1fr)
-    );
-
-    padding-inline: var(--side-padding);
-}
-
-.card {
-    display: flex;
-    flex-direction: column;
-    background-color: #fff;
-    border-radius: 6px;
-    overflow: hidden;
-}
-
-.card:hover {
-    transform: scale(1.02);
-    transition: transform 0.3s ease-in-out;
-}
-
-.card-media {
-    display: flex;
-}
-
-.card-media img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-.card-title {
-    font-size: 1.25rem;
-    font-weight: 700;
-    padding-block: 1rem;
-    padding-inline: var(--side-padding);
-}
+/*HEADER*/
 
 .site-header {
     position: relative;
@@ -94,8 +48,18 @@ body::before {
     align-items: center;
     padding-block: 0.5rem;
     padding-inline: var(--side-padding);
-    background: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: rgb(237, 237, 237, 0.8);
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+
+    a:hover {
+        color: #007bff;
+    }
 }
 
 .nav-checkbox {
@@ -109,18 +73,94 @@ body::before {
     user-select: none;
 }
 
-a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
+.page-title {
+    padding-inline: var(--side-padding);
 }
 
-nav {
+.card {
     display: flex;
-    gap: 1rem;
+    flex-direction: column;
+    background: rgb(237, 237, 237, 0.9);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 
-    a:hover {
-        color: #007bff;
+    :hover {
+        transform: scale(1.02);
+        transition: transform 0.3s ease-in-out;
+    }
+}
+
+.card-grid {
+    display: grid;
+    gap: 2rem;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(var(--min-col-size), 100%), 1fr)
+    );
+
+    padding-inline: var(--side-padding);
+}
+
+.card-media {
+    display: flex;
+
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+.card-title {
+    font-size: 1rem;
+    font-weight: 700;
+    padding-block: 1rem;
+    padding-inline: var(--side-padding);
+}
+
+.post-content {
+    padding-inline: var(--side-padding);
+
+    p {
+        padding-block: 0.5rem;
+    }
+
+    img {
+        width: 50%;
+        height: auto;
+        padding-inline: auto;
+        object-fit: cover;
+    }
+}
+
+/*RECIPE*/
+
+.hero-recipe {
+    display: grid;
+    /*gap: 2rem;*/
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(var(--min-col-size), 100%), 1fr)
+    );
+    background: rgb(237, 237, 237, 0.9);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 6px;
+    }
+
+    p {
+        align-self: center;
+        text-align: center;
+        padding-inline: 1rem;
     }
 }
 
@@ -135,20 +175,31 @@ nav {
 }
 
 footer {
-    background: #2f2f2f;
-    color: #ffffff;
+    background: rgb(235, 235, 235, 0.9);
+    /*color: #ffffff;*/
     text-align: center;
     font-size: 0.8rem;
     margin-top: 1rem;
     padding: 0.5rem 0;
-}
 
-footer p {
-    margin: 0;
+    p {
+        margin: 0;
+    }
 }
 
 /* Responsive Mobile Styles */
 @media (max-width: 768px) {
+    body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background:
+            linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.7)),
+            url("/moje-wypieki/public/img/bckgr.webp") top left / cover
+                no-repeat;
+        z-index: -1;
+    }
+
     .nav-toggle {
         display: block; /* Show hamburger on mobile */
     }
@@ -164,11 +215,11 @@ footer p {
         text-align: center;
         padding: 1rem 0;
         box-shadow: 0 4px 5px rgba(0, 0, 0, 0.05);
-    }
 
-    .nav a {
-        margin: 10px 0;
-        display: block;
+        a {
+            margin: 10px 0;
+            display: block;
+        }
     }
 
     /* The "Magic": When checkbox is checked, show the nav */
