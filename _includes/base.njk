@@ -10,15 +10,15 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="{{ '/public/css/style.css' | url }}" />
-        <link rel="stylesheet" href="{{ '/public/css/variables.css' | url }}" />
-        <script src="{{ '/public/js/script.js' | url }}" defer></script>
+        <link rel="stylesheet" href="/public/css/style.css" />
+        <link rel="stylesheet" href="/public/css/variables.css" />
+        <script src="/public/js/script.js" defer></script>
         <title>{{ title }}</title>
     </head>
     <body>
         <div class="container">
             <header class="site-header">
-                <h2><a href="{{ '/' | url }}">Mam Wypieki</a></h2>
+                <h2><a href="/">Mam Wypieki</a></h2>
 
                 <input type="checkbox" id="nav-checkbox" class="nav-checkbox" />
 
@@ -31,10 +31,10 @@
                 </label>
 
                 <nav class="nav">
-                    <a href="{{ '/' | url }}">Home</a>
-                    <a href="{{ '/bakery' | url }}">Wypieki</a>
-                    <a href="{{ '/vege' | url }}">Vege</a>
-                    <a href="{{ '/about' | url }}">O mnie</a>
+                    <a href="/">Home</a>
+                    <a href="/bakery">Wypieki</a>
+                    <a href="/vege">Vege</a>
+                    <a href="/about">O mnie</a>
                 </nav>
             </header>
 

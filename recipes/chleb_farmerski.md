@@ -11,16 +11,16 @@ imageAlt: rajma
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
 Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
 
-<img src="{{ '/public/img/pizza.jpg' | url }}" alt="pizza">
+<img src="/public/img/pizza.jpg" alt="pizza">
 
 <p>Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.</p>
 
-<img src="{{ '/public/img/rajma.jpg' | url }}" alt="rajma">
+<img src="/public/img/rajma.jpg" alt="rajma">
 
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
 Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
 
-<img src="{{ '/public/img/bread.jpg' | url }}" alt="bread">
+<img src="/public/img/bread.jpg" alt="bread">
 
 </div>
 

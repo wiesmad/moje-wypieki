@@ -2,7 +2,7 @@
 title: Golden Curry
 date: 2024-11-05
 tags: ['odd']
-image: rajma.jpg
+image: rajma.webp
 imageAlt: rajma
 ---
 
